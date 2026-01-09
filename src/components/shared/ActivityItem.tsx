@@ -1,5 +1,3 @@
-import * as React from "react";
-
 interface ActivityItemProps {
   description: string;
   timestamp: string;

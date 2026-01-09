@@ -1,4 +1,4 @@
-import React, { useMemo, useState, useEffect } from "react";
+import { useMemo, useState } from "react";
 import DefaultTable, { type Column } from "./DefaultTable";
 import { DefaultButton } from "@/components/input/DefaultButton";
 import type { DistributorDataProps } from "@/assets/dataset/DistributorDataset";
@@ -21,7 +21,7 @@ export default function DistributorsTable({
   const [tierFilterLabel, setTierFilterLabel] = useState<string>("Tier");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [ViewDistributorModal, setViewDistributorModal] = useState<boolean>(false);
-  const [ViewDistributorData, setViewDistributorData] = useState<DistributorDataProps | null>(null);
+  const [_viewDistributorData, setViewDistributorData] = useState<DistributorDataProps | null>(null);
 
   // Handle actions internally
   const handleInviteDistributor = () => {

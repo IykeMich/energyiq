@@ -1,4 +1,3 @@
-import * as React from "react";
 import {
   PieChart,
   Pie,
@@ -61,7 +60,7 @@ export default function InventoryStatusChart() {
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
                 <Pie
-                  data={topProductsData}
+                  data={topProductsData as any} // type cast to fix TypeScript error
                   cx="50%"
                   cy="50%"
                   labelLine={false}
